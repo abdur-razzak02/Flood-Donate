@@ -1,5 +1,5 @@
 // home page to blog page button
-document.getElementById("homeToBlog").addEventListener("click", function () {
+document.getElementById("switchToBlog").addEventListener("click", function () {
   window.location.href = "./blog.html";
 });
 
@@ -67,3 +67,15 @@ document
     const newAccountBalance = accountBalace - quotaDonation;
     document.getElementById("accountBalance").innerText = newAccountBalance;
   });
+
+
+document.getElementById('allDonationBtn').addEventListener('click', function () {
+    showSection('donationCards');
+    document.getElementById('allDonationBtn').classList.add('bg-[#B4F461]');
+    document.getElementById('historyBtn').classList.remove('bg-[#B4F461]');
+})
+document.getElementById('historyBtn').addEventListener('click', function () {
+    showSection('donationHistory');
+    document.getElementById('historyBtn').classList.add('bg-[#B4F461]');
+    document.getElementById('allDonationBtn').classList.remove('bg-[#B4F461]');
+})

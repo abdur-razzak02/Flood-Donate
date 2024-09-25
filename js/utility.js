@@ -11,3 +11,14 @@ function currentBalance(id) {
     const balanceTk = parseFloat(balance);
     return balanceTk;
 }
+
+// show hide sections 
+function showSection(id) {
+    document.getElementById('donationCards').classList.add('hidden');
+    document.getElementById('donationHistory').classList.add('hidden');
+    document.getElementById(id).classList.remove('hidden');
+}
+
+
+
+
